@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  balancer: 
+    image: balancer
+    container_name: Balancer
+    build: .
+    restart: on-failure
+    ports:
+      - "9000:9000"
+    networks:
+      - proxynet
+
+networks:
+  proxynet:
+    name: proxynet

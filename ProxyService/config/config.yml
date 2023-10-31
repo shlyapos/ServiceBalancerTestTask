@@ -1,0 +1,4 @@
+host: "web"
+port: 9000
+proxy_port: 8080
+service_count: 5
