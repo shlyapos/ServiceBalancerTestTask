@@ -47,7 +47,7 @@ func (p *Pool) AddService(newService *service.Service) {
 
 func isServiceAlive(url *url.URL) bool {
 	client := &http.Client{
-		Timeout: 5 * time.Second,
+		Timeout: time.Second * 2,
 	}
 
 	resp, err := client.Get(url.String() + "/ping")

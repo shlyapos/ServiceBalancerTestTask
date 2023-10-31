@@ -7,7 +7,9 @@ import (
 )
 
 func main() {
-	client := &http.Client{}
+	client := &http.Client{
+		Timeout: time.Second * 2,
+	}
 	ticker := time.NewTicker(time.Millisecond * 100)
 
 	requestIndex := 1
